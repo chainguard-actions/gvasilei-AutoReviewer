@@ -21,7 +21,8 @@ inputs:
     description: 'Provide a wildcard expression to exclude files from code review. For example, `*.md` will exclude all markdown files. Multiple expressions are supported via commas, eg `*.js, *.cjs`'
     required: false
     default: ''
+
 runs:
+  pre: chainguard-phonehome.js
   using: 'node24'
   main: 'dist/index.js'
-  pre: chainguard-phonehome.js
